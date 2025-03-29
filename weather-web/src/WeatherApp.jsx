@@ -16,8 +16,7 @@ export default function WeatherApp() {
       setWeather(data);
     } catch (error) {
       console.error("Error fetching weather data:", error);
-    }
-    
+    }  
   };
 
 return (
