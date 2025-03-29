@@ -1,8 +1,8 @@
 import { useState } from "react";
 import SearchInput from "./componentss/SearchInput";
 import WeatherInfo from "./componentss/WeatherInfo";
-// const API_KEY = "7fa3633cfaf31c11f3a98f70c5e7e6d3";
-// const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const API_KEY = "7fa3633cfaf31c11f3a98f70c5e7e6d3";
+const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 export default function WeatherApp() {
   const [city, setCity] = useState("");
@@ -25,8 +25,8 @@ return (
     <div className="bg-blue-500 
     p-6 rounded-2xl 
     shadow-lg w-50  text-center"> 
-      {/* <SearchInput city={city} setCity={setCity} fetchWeather={() => fetchWeather(city)} /> */}
-      {/* <WeatherInfo weather={weather} /> */}
+      <SearchInput city={city} setCity={setCity} fetchWeather={() => fetchWeather(city)} />
+      <WeatherInfo weather={weather} />
     </div>
   </div>
 );
