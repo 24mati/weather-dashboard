@@ -5,11 +5,9 @@ function WeatherInfo({ weather }) {
   
     return (
       <div>
-        <img
-          className="mx-auto w-24 h-24"
-          src={weather.weather[0].main.toLowerCase() + ".jpg"}
-          alt="Weather Icon"
-        />
+        <img className="mx-auto w-24 h-24"
+          src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+           alt={weather.weather[0].description}/>
         <h1 className="text-2xl font-bold">{weather.name}</h1>
         <h2 className="text-xl">{Math.round(weather.main.temp)}°C</h2>
         <div className="flex justify-between mt-4">
