@@ -30,13 +30,13 @@ export default function WeatherApp() {
     return "bg-blue-100"; // Default fallback
   };
 return (
-  <div className={`flex flex-col items-center justify-center min-h-screen transition-all duration-500 ${Backgroundcolor()}`}>
-    <div className="bg-blue-500 
-    p-6 rounded-2xl 
-    shadow-lg w-50  text-center"> 
+  <div className={`flex flex-col items-center justify-center min-h-screen w-full hcreen -stransition-all duration-500 ${Backgroundcolor()}`}>
+     <div className="bg-blue-300 p-6 rounded-2xl shadow-lg w-full max-w-lg h-full text-center">
+
       <SearchInput city={city} setCity={setCity} fetchWeather={() => fetchWeather(city)} />
       <WeatherInfo weather={weather} />
     </div>
   </div>
 );
 }
+
