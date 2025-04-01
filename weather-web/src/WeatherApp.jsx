@@ -7,12 +7,19 @@ const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=
 export default function WeatherApp() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
-
   const fetchWeather = async () => {
-    if (!city) return;
+    if (!city)
+      {
+        alert("please enter a correct country name");
+        return;
+      } 
     try {
       const response = await fetch(`${API_URL}${city}&appid=${API_KEY}`);
       const data = await response.json();
+      if (data.cod === "404"){
+        alert("please enter a correct country name");
+        return;
+      }
       setWeather(data);
     } catch (error) {
       console.error("Error fetching weather data:", error);
