@@ -38,7 +38,7 @@ export default function WeatherApp() {
   };
 return (
   <div className={`flex flex-col items-center justify-center min-h-screen w-full hcreen -stransition-all duration-500 ${Backgroundcolor()}`}>
-     <div className="bg-blue-300 p-6 rounded-2xl shadow-lg w-full max-w-lg h-full text-center">
+     <div className="bg-oklch(0.424 0.199 265.638) p-6 rounded-2xl shadow-lg w-full max-w-lg h-full text-center">
 
       <SearchInput city={city} setCity={setCity} fetchWeather={() => fetchWeather(city)} />
       <WeatherInfo weather={weather} />
