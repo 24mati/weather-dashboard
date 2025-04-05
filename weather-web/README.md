@@ -28,3 +28,8 @@ weather-app/
 ├── tailwind.config.js
 ├── vite.config.js
 └── package.json
+................API Key Configuration
+condition.This project uses OpenWeatherMap API.
+If you plan to deploy or modify it, make sure to replace the API key in WeatherApp.jsx:
+const API_KEY = "7fa3633cfaf31c11f3a98f70c5e7e6d3";
+const API_URL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
